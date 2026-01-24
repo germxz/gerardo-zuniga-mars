@@ -1,0 +1,70 @@
+body {
+  background-color: rgba(19, 0, 42, 0.804);
+  color: #e5deff;
+  font-family: "Gruppo", sans-serif;
+  font-weight: 400;
+}
+
+section {
+  margin: 20px;
+  padding: 2%;
+}
+
+#Experience,
+#About,
+#Connect {
+  text-align: center;
+  background-color: rgba(45, 174, 172, 0.42);
+  margin-top: 5px;
+}
+h1 {
+  color: #d9ffdb;
+  font-style: oblique;
+  font-size: 50px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+
+h2 {
+  background-color: #48ff8285;
+  padding: 10px;
+  border-radius: 8rem;
+  border: 1px solid #48ff82;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+#Experience ul {
+  list-style: none;
+  padding: 0;
+}
+
+#Experience li {
+  background-color: rgba(19, 181, 105, 0.18);
+  padding: 20px;
+  margin: 10px 0;
+  border: 1px solid #48ff82;
+  border-radius: 8rem;
+}
+
+a {
+  color: #48ff82;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8rem;
+  border: 2px solid #48ff82;
+}
+.blockchain {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+.console {
+  display: block;
+  margin: auto;
+  max-width: 70%;
+}
