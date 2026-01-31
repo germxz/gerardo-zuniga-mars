@@ -10,13 +10,14 @@ section {
   padding: 2%;
 }
 
-#Experience,
 #About,
-#Connect {
+#Skills,
+#Projects {
   text-align: center;
-  background-color: rgba(45, 174, 172, 0.42);
+  background-color: rgba(19, 181, 105, 0.18);
   margin-top: 5px;
 }
+
 h1 {
   color: #d9ffdb;
   font-style: oblique;
@@ -27,61 +28,52 @@ h1 {
 }
 
 h2 {
-  background-color: #48ff8285;
+  background-color: rgba(19, 181, 105, 0.18);
   padding: 10px;
   border-radius: 8rem;
   border: 1px solid #48ff82;
-  font-size: 30px;
+  font-size: 3rem;
   margin-bottom: 20px;
+  text-align: center;
 }
+
+/* Experience Section Styles ---*/
 
 #Experience ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
+  align-items: flex-start;
 }
 
-#Experience li {
-  background-color: rgba(19, 181, 105, 0.18);
-  padding: 20px;
-  margin: 10px 0;
-  border: 1px solid #48ff82;
-  border-radius: 8rem;
+.job-date {
+  margin-left: auto;
 }
+
 #Experience li {
   background-color: rgba(19, 181, 105, 0.18);
   padding: 20px;
   margin: 20px 0;
   border: 1px solid #48ff82;
   border-radius: 1rem;
-
   display: flex;
   flex-direction: column;
   gap: 10px;
+  font-size: 1.2rem;
 }
 
-.exp-top {
+.job-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.job-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-}
-
-.job-date {
-  opacity: 0.8;
-}
-
-.job-desc {
-  line-height: 1.4;
-}
-
+/* nav bar -- */
 a {
   color: #48ff82;
   text-decoration: none;
 }
+
+/* Gif Manipulation --*/
 img {
   max-width: 100%;
   height: auto;
@@ -97,4 +89,31 @@ img {
   display: block;
   margin: auto;
   max-width: 70%;
+}
+.githubLogo,
+.linkedinLogo {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  vertical-align: middle;
+}
+/*Connect Section Styles --*/
+#Connect {
+  background-color: rgba(19, 181, 105, 0.18);
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+#Connect a:hover {
+  flex-direction: row;
+  align-items: center;
+  text-decoration: underline;
+  color: blue;
+}
+nav {
+  background-color: rgba(19, 181, 105, 0.18);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
