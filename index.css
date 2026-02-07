@@ -1,3 +1,5 @@
+/* ====== Mobile Styles ====== */
+
 body {
   background-color: rgba(19, 0, 42, 0.804);
   color: #e5deff;
@@ -67,12 +69,6 @@ h2 {
   align-items: center;
 }
 
-/* nav bar -- */
-a {
-  color: #48ff82;
-  text-decoration: none;
-}
-
 /* Gif Manipulation --*/
 img {
   max-width: 100%;
@@ -98,6 +94,18 @@ img {
   vertical-align: middle;
 }
 /*Connect Section Styles --*/
+nav {
+  background-color: rgba(19, 181, 105, 0.18);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 1rem;
+}
+
+nav a {
+  color: #48ff82;
+  text-decoration: none;
+}
 #Connect {
   background-color: rgba(19, 181, 105, 0.18);
   justify-content: center;
@@ -105,15 +113,43 @@ img {
   gap: 30px;
   text-align: center;
 }
-#Connect a:hover {
+#Connect a:hover,
+#Connect a {
   flex-direction: row;
   align-items: center;
-  text-decoration: underline;
-  color: blue;
+  text-decoration: none;
+  color: rgb(36, 255, 160);
 }
-nav {
-  background-color: rgba(19, 181, 105, 0.18);
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+
+/*===== Tablet Styles =====*/
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  #Experience li {
+    font-size: 1.4rem;
+    flex-direction: row;
+  }
+  nav {
+    margin: 1.5rem;
+    padding: 1rem;
+  }
+}
+
+/*===== Desktop Styles =====*/
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+    text-align: left;
+  }
+  #Experience li {
+    font-size: 1.6rem;
+    flex-direction: column;
+  }
+  nav {
+    margin: 2rem;
+    padding: 2rem;
+  }
 }
