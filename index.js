@@ -1,26 +1,18 @@
 const body = document.body;
 //////===Copyright Section===//////
-const footer = document.createElement("footer"); //create footer
-body.appendChild(footer); //append footer to body (bottom)
+const footer = document.createElement("footer");
+body.appendChild(footer);
 
-// Create a new date object
 const today = new Date();
 const thisYear = today.getFullYear();
 
-const copyright = document.createElement("p"); // creates <p></p> for `copyright`
-
-//set the inner html with the copyright sympbol , your name, and year
-
+const copyright = document.createElement("p");
 copyright.innerHTML = `\u00A9 Gerardo Zuniga ${thisYear}`;
-footer.appendChild(copyright); // append <p> to the footer
-//////////////////////////////////////////////////////////////
+footer.appendChild(copyright);
 
 /////=== Skills section===////////
 const skills = ["HTML", "CSS", "JavaScript", "Git", "GitHub"];
-
 const skillsSection = document.getElementById("Skills"); // select skills section by id
-
-//Unordered list
 const skillsList = skillsSection.querySelector("ul");
 
 //Loop through skills and create list items for each skill
@@ -29,3 +21,31 @@ for (let i = 0; i < skills.length; i++) {
   skill.innerText = skills[i];
   skillsList.appendChild(skill);
 }
+
+/////=== Message handling===//////
+const messageForm = document.getElementsByName("leave_message")[0];
+messageForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const userName = event.target.usersName.value;
+  const userEmail = event.target.usersEmail.value;
+  const userMessage = event.target.usersMessage.value;
+  console.log(userName, userEmail, userMessage);
+
+  //// DISPLAY MESSAGES ///
+  const messageSection = document.getElementById("messages");
+  const messageList = messageSection.querySelector("ul"); // adds messages to <ul> in messages section
+  const newMessage = document.createElement("li");
+  newMessage.innerHTML = `<a href= mailto: ${userEmail}> ${userName}</a> <span> wrote: ${userMessage} </span>`;
+
+  const removeButton = document.createElement("button");
+  removeButton.innerText = "remove";
+  removeButton.type = "button";
+  removeButton.addEventListener("click", function () {
+    const entry = removeButton.parentNode;
+    entry.remove();
+  });
+  removeButton.appendChild(newMessage);
+  messageList.appendChild(newMessage);
+
+  messageForm.reset();
+});
