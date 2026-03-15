@@ -1,4 +1,18 @@
 /* ====== Mobile Styles ====== */
+#Projects ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+projects li {
+  background-color: rgba(19, 181, 105, 0.18);
+  padding: 10px;
+  border: 1px solid #48ff82;
+  border-radius: 1rem;
+  text-align: center;
+}
 
 #messages {
   font-size: 1.2rem;
